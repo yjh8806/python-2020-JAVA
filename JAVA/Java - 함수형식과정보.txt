@@ -1,0 +1,7 @@
+
+String java.lang.String.substring(int beginIndex, int endIndex)
+
+1) 문자열을 반환하는 함수이다
+2) java.lang.String 클래스에 정의되어 있는 함수이다 (import java.lang.*;)
+3) 매개변수에 두 개의 int 값을 전달받는다
+4) 첫번째 정수는 문자열의 시작지점 인덱스이고, 두번째 정수는 문자열의 마지막 인덱스이다

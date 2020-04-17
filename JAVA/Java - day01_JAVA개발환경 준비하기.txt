@@ -1,0 +1,73 @@
+
+	1. jdk-8u181-windows-x64.exe 설치
+
+	JDK (Java Development Kit : 자바 개발 도구)
+	- 자바 언어를 이용하여 프로그램을 작성할 수 있는 도구
+	C:\> javac -version
+
+	JRE (Java Runtime Environment : 자바 실행 환경)
+	- 자바로 작성된 프로그램을 실행할 수 있는 환경
+	- ex) 마인크래프트
+	C:\> java -version
+
+
+	2. 환경 변수 설정
+
+	C:\Program Files\Java\jdk1.8.0_181\bin 
+	위 폴더에 java.exe 와 javac.exe가 설치되어 있는데
+	javac.exe를 어디서나 실행할 수 있도록
+	환경 변수 Path에 등록하기
+
+	sysdm.cpl - 고급 - 환경 변수 - 시스템 변수에 추가
+	이름 : JAVA_HOME
+	내용 : C:\Program Files\Java\jdk1.8.0_181
+
+	Path 항목 편집 - 마지막 줄에 내용 추가
+	내용 : %JAVA_HOME%\bin
+
+	모든 창을 확인 하고, 새로 cmd를 열어서
+	C:\> javac -version 
+	실행 여부 확인
+
+	3. 자바 정상 작동 확인하기
+	=======================================================
+	import java.lang.*;
+
+	public class Hello{
+		public static void main(String[] args){
+			System.out.print("Hello, world !!\n");
+		}
+	}
+	=======================================================
+
+	위와 같은 코드를 메모장으로 작성하여 Hello.java로 저장
+
+	저장된 위치에서 cmd를 실행하여
+
+	C:\> javac Hello.java	// 소스코드를 바이트 코드로 변환
+
+	C:\> java Hello		// 변환된 바이트 코드를 실행
+	Hello, world !!
+
+
+	=======================================================
+	import java.lang.*;	// 기본 실행 함수를 소스코드에 포함 	( #include<stdio.h> )
+
+	public class Hello{	// 파일이름과 같아야 한다		// 자바는 함수가 기본단위가 아니라, 클래스가 기본단위
+		public static void main(String[] args){		// 메인함수는 반드시 본 내용과 똑같이 작성해야 한다
+			System.out.print("Hello, world !!\n");
+		}
+	}
+	=======================================================
+
+
+
+
+
+
+
+
+
+
+
+
